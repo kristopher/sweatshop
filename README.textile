@@ -26,7 +26,7 @@ rake sweatshop:generate
 # Make sure you put the two following lines into spec/spec_helper.rb:
 <pre><code>
 require 'factory_girl'
-require "Dir.glob("#{RAILS_ROOT}/spec/factories/*.rb").each {|f| require f }"
+require Dir.glob("#{RAILS_ROOT}/spec/factories/*.rb").each {|f| require f }
 </code></pre>
 
 # Your Factories will now be automatically included whenever you run your specs.
