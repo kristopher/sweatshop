@@ -8,23 +8,27 @@ You should probably have the "factory_girl":http://github.com/thoughtbot/factory
 
 h2. How to Install & Use
 
-# Install the rscribd gem
+# Install the factory_girl gem
 <pre><code>
 gem install factory_girl
 </code></pre>
+
 # Install the plugin
 <pre><code>
 ./script/plugin install git://github.com/mdarby/sweatshop.git
 </code></pre>
+
 # Run the following rake task to generate your Factories
 <pre><code>
 rake sweatshop:generate
 </code></pre>
+
 # Make sure you put the two following lines into spec/spec_helper.rb:
 <pre><code>
 require 'factory_girl'
 require "Dir.glob("#{RAILS_ROOT}/spec/factories/*.rb").each {|f| require f }"
 </code></pre>
+
 # Your Factories will now be automatically included whenever you run your specs.
 
 That’s it!
