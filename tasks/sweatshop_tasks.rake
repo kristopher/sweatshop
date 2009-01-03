@@ -63,7 +63,7 @@ Created Factories for: #{models.to_sentence}
 
 Make sure you put the two following lines into spec/spec_helper.rb:
   require 'factory_girl'
-  require \"Dir.glob(\"\#{RAILS_ROOT}/spec/factories/*.rb\").each {|f| require f }\"
+  Dir.glob("#{RAILS_ROOT}/spec/factories/*.rb").each {|f| require f }
     END
   end
   
