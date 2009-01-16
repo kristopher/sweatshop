@@ -1,6 +1,6 @@
 h1. Sweatshop
 
-A Rails plugin that generates "factory_girl":http://github.com/thoughtbot/factory_girl/tree/master Factories for all of your ActiveRecord models.
+A Rails plugin that generates "factory_girl":http://github.com/thoughtbot/factory_girl/tree/master Factories for all of your ActiveRecord models.  This fork (mileszs) will place all factories in one file (test/factories.rb or spec/factories.rb).  It will also generate an association line (like 'o.user { |a| a.association(:user) }') for fields like 'something_id'.
 
 h2. Requirements
 
