@@ -15,7 +15,7 @@ gem install factory_girl
 
 # Install the plugin
 <pre><code>
-./script/plugin install git://github.com/mdarby/sweatshop.git
+./script/plugin install git://github.com/mileszs/sweatshop.git
 </code></pre>
 
 # Run the following rake task to generate your Factories
@@ -23,20 +23,20 @@ gem install factory_girl
 rake sweatshop:generate
 </code></pre>
 
-# Make sure you put the two following lines into spec/spec_helper.rb:
+# Make sure you put the two following lines into test/test_helper or spec/spec_helper.rb, as the task advises:
 <pre><code>
-require 'factory_girl'
-Dir.glob("#{RAILS_ROOT}/spec/factories/*.rb").each{|factory| require factory}
+  require 'factory_girl'
+  require File.expand_path(File.dirname(__FILE__)) + '/factories'
 </code></pre>
 
-# Your Factories will now be automatically included whenever you run your specs.
+# Your Factories will now be automatically included whenever you run your tests/specs.
 
 That’s it!
 
 
 h2. Notes
 
-I use "RSpec":http://github.com/dchelimsky/rspec/tree/master for my BDD habit; you might use something else. Those two lines I mention above can be used in Test::Unit, I'm sure. However, it's up to you to figure out ;)
+In this fork of sweatshop (mileszs), all factories are placed in test/factories.rb (or spec/factories.rb).  Having separate files per model is too much like fixtures for my tastes -- I want to see all of my factories in one file.  If you would prefer separate files, as of now (1-16-09) the original sweatshop retains the multiple-files method: "mdarby-sweatshop":http://github.com/mdarby/sweatshop .
 
 
 h2. About the Author
