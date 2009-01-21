@@ -13,7 +13,12 @@ namespace :sweatshop do
 
     updated_models = []
     
-    models_to_factorize = ENV['MODELS'].split(" ").map {|m| m.constantize} || models
+    if ENV['MODELS']
+      models_to_factorize = ENV['MODELS'].split(" ").map {|m| m.constantize}
+    else
+      models_to_factorize = models
+    end
+    
     models_to_factorize.each{ |model| updated_models << model.to_s if generate_factory(model) }
     
     print_outro(updated_models)
