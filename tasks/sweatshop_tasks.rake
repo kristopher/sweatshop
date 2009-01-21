@@ -12,9 +12,10 @@ namespace :sweatshop do
     require "#{RAILS_ROOT}/config/environment"
 
     updated_models = []
-
-    models.each{ |model| updated_models << model.to_s if generate_factory(model) }
-
+    
+    models_to_factorize = ENV['MODELS'].split(" ").map {|m| m.constantize} || models
+    models_to_factorize.each{ |model| updated_models << model.to_s if generate_factory(model) }
+    
     print_outro(updated_models)
   end
 
