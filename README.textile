@@ -23,7 +23,7 @@ Run the following rake task to generate your Factories
 rake sweatshop:generate
 </code></pre>
 
-Thanks to David Baldwin "bilson-sweatshop":http://github.com/bilson/sweatshop/tree/master , you can specify the models for which you wish to generate factories, like this:
+Thanks to David Baldwin ( "bilson-sweatshop":http://github.com/bilson/sweatshop/tree/master ) , you can specify the models for which you wish to generate factories, like this:
 <pre><code>
 rake sweatshop:generate MODELS="User Post Comment"
 </code></pre>
