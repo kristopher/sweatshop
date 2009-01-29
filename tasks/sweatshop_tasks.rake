@@ -12,16 +12,16 @@ namespace :sweatshop do
     require "#{RAILS_ROOT}/config/environment"
 
     updated_models = []
-    
+
     if ENV['MODELS']
       models_to_factorize = ENV['MODELS'].split(" ").map {|m| m.constantize}
     else
       models_to_factorize = models
     end
-    
+
     models_to_factorize.each{ |model| updated_models << model.to_s if generate_factory(model) }
-    
-    print_outro(updated_models)
+
+t   print_outro(updated_models)
   end
 
   def generate_factory(model)
@@ -39,7 +39,7 @@ namespace :sweatshop do
 
       model.columns_hash.each_pair do |key, val|
         unless key =~ /^(id|type)$/
-          if key =~ /([a-z]*)_id/
+          if key =~ /([a-z_]*)_id/
             # Example #=> g.organization { |o| o.association(:organization) }
             key = "#{$1}"
             value = "{ |a| a.association(:#{$1.to_sym}) }"
