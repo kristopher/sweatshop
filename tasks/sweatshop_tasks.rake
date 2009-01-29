@@ -39,7 +39,7 @@ t   print_outro(updated_models)
 
       model.columns_hash.each_pair do |key, val|
         unless key =~ /^(id|type)$/
-          if key =~ /([a-z_]*)_id/
+          if key =~ /([a-z_]*)_id/ && val.type.to_s == "integer"
             # Example #=> g.organization { |o| o.association(:organization) }
             key = "#{$1}"
             value = "{ |a| a.association(:#{$1.to_sym}) }"
