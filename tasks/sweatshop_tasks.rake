@@ -48,6 +48,7 @@ t   print_outro(updated_models)
               when "string", "text": "'foo'"
               when "integer": 1
               when "float": 1.0
+              when "decimal": 1.0
               when "date": "'#{Date.today}'"
               when "datetime", "time", "timestamp": "'#{Time.now}'"
               when "boolean": false
