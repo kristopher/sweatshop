@@ -10,7 +10,7 @@ h2. How to Install & Use
 
 Install the factory_girl gem
 <pre><code>
-gem install factory_girl
+gem install thoughtbot-factory_girl --source http://gems.github.com
 </code></pre>
 
 Install the plugin
