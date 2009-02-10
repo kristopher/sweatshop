@@ -63,7 +63,7 @@ rake sweatshop:generate:blueprints MODELS="User Post Comment"
 
 Make sure you put the following line in test/test_helper or spec/spec_helper.rb, as the task advises:
 <pre><code>
-  require File.expand_path(File.dirname(__FILE__)) + '/factories'
+  require File.expand_path(File.dirname(__FILE__)) + '/blueprints'
 </code></pre>
 Also, set Sham to reset before each test. In the class Test::Unit::TestCase block in your test_helper.rb, add:
 <pre><code>
