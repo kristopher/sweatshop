@@ -40,6 +40,8 @@ Make sure you put the two following lines into test/test_helper or spec/spec_hel
 
 h3. Machinist Instructions
 
+This plugin is slightly less useful for the machinist plugin given that machinist already dynamically sets defaults for your models.  You would generally override these defaults only for specific attributes that you are testing.  However, for large tables it can be handy to see all of the columns and quickly cut out anything that is not necessary.
+
 Install the machinist gem
 <pre><code>
 gem install notahat-machinist --source http://gems.github.com
